@@ -1,7 +1,7 @@
-USE SENAI_HROADS_MANHA
+USE SENAI_HROADS_MANHA;
+GO
 
-SELECT * FROM Classes
-INSERT INTO Classes  (Nome)
+INSERT INTO CLASSE(nomeClasse)
 VALUES				 ('Bárbaro')
 					,('Cruzado')
 					,('Caçadora de Demônios')
@@ -10,23 +10,23 @@ VALUES				 ('Bárbaro')
 					,('Feiticeiro')
 					,('Arcanista')
 
-INSERT INTO Personagens	(Nome, idClasses, QntVida, QntMana, DataAtualizacao, DataCriacao)
+INSERT INTO PERSONAGEM(nomePersonagem, idClasse, QtndVida, QtndMana, DataAtualizacao, DataCriacao)
 VALUES					('DeuBug', 1, 100, 80, '01-03-2021', '18-01-2019')
 					   ,('BitBug', 4, 70, 100, '01-03-2021', '17-03-2016')
 					   ,('Fer8', 7, 75, 60, '01-03-2021', '18-03-2018')
 
-INSERT INTO TiposHabilidade (Nome)
+INSERT INTO TIPO_HABILIDADE(nomeTipoHab)
 VALUES						('Ataque')
 						   ,('Defesa')
 						   ,('Cura')
 						   ,('Magia')
 
-INSERT INTO Habilidades (Nome, idTipo)
+INSERT INTO HABILIDADE(nomeHabilidade, idTipoHab)
 VALUES					('Lança Mortal', 1)
 					   ,('Escudo Supremo', 2)
 					   ,('Recuperar Vida', 3)
 
-INSERT INTO ClassesHabilidades   (idClasses, idHabilidades)
+INSERT INTO CLASSE_HABILIDADE(idClasse, idHabilidade)
 VALUES							 (1, 1)
 								,(1, 2)
 								,(2, 2)
@@ -35,12 +35,10 @@ VALUES							 (1, 1)
 								,(4, 2)
 								,(6, 3)
 
-UPDATE Personagens
-SET Nome = 'Fer7'
-WHERE idPersonagens = 3
+UPDATE PERSONAGEM
+SET nomePersonagem = 'Fer7'
+WHERE idPersonagem = 3
 
-UPDATE Classes
-SET NOME = 'Necromancer'
-WHERE idClasses = 5
-
-
+UPDATE CLASSE
+SET nomeClasse = 'Necromancer'
+WHERE idClasSE = 5
