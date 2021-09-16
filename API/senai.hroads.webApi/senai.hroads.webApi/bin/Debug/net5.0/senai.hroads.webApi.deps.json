@@ -31,7 +31,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "senai.hroads.webApi/1.0.0": {
+      "senai.hroads.webAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.10",
@@ -324,10 +324,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "senai.hroads.webApi.dll": {}
+          "senai.hroads.webAPI.dll": {}
         },
         "compile": {
-          "senai.hroads.webApi.dll": {}
+          "senai.hroads.webAPI.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -3494,7 +3494,7 @@
     }
   },
   "libraries": {
-    "senai.hroads.webApi/1.0.0": {
+    "senai.hroads.webAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

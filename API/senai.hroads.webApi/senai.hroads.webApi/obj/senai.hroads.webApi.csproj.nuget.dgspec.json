@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {}
+    "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj": {
+    "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
-        "projectName": "senai.hroads.webApi",
-        "projectPath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+        "projectUniqueName": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
+        "projectName": "senai.hroads.webAPI",
+        "projectPath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
         "packagesPath": "C:\\Users\\AMD\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "outputPath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AMD\\AppData\\Roaming\\NuGet\\NuGet.Config",

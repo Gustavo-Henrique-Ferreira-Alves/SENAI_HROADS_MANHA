@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:65293",
+      "applicationUrl": "http://localhost:12536",
       "sslPort": 0
     }
   },
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "senai.hroads.webApi": {
+    "senai.hroads.webAPI": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

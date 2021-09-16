@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "senai.hroads.webApi", "senai.hroads.webApi\senai.hroads.webApi.csproj", "{D745DAE0-5AD8-4847-92DD-B66C76410DE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "senai.hroads.webAPI", "senai.hroads.webAPI\senai.hroads.webAPI.csproj", "{23B5A473-ACB5-454E-B48F-0EA0D76324AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D745DAE0-5AD8-4847-92DD-B66C76410DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D745DAE0-5AD8-4847-92DD-B66C76410DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D745DAE0-5AD8-4847-92DD-B66C76410DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D745DAE0-5AD8-4847-92DD-B66C76410DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B5A473-ACB5-454E-B48F-0EA0D76324AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B5A473-ACB5-454E-B48F-0EA0D76324AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B5A473-ACB5-454E-B48F-0EA0D76324AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B5A473-ACB5-454E-B48F-0EA0D76324AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D6FB05AB-4A6E-484C-99CE-AF7BD3D22A2F}
+		SolutionGuid = {B427BDD9-74AE-4F61-8EB9-00255CF0954B}
 	EndGlobalSection
 EndGlobal

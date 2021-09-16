@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace senai.hroads.webApi.Domains
+namespace senai.hroads.webAPI.Domains
 {
-    public partial class ClasseHabilidade
+    public partial class ClassesHabilidade
     {
         public int IdClasseHab { get; set; }
         public int? IdClasse { get; set; }

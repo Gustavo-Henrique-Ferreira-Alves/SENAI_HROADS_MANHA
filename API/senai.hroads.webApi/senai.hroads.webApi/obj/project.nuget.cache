@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jbkLXJJ+3QINkK4HTnopequwBi1lOE5TbrLapQJF8xxLcn4zRbO8dFmySqyHLxqzoxDWfuw3U8fGG8L9Qhcffg==",
+  "dgSpecHash": "7kuFFgNNl5iSbGIysrmM3z4INRgm/t/ZQ0Mvt1ACBG6EsPcPvF3yRGCUUUidMNdOOWnVh9F6yXBoSVPLX5nifQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi.csproj",
+  "projectFilePath": "C:\\Users\\AMD\\Documents\\SENAI_HROADS_MANHA\\API\\senai.hroads.webAPI\\senai.hroads.webAPI\\senai.hroads.webAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AMD\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\AMD\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.10\\microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512",

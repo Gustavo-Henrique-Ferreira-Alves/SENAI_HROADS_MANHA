@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace senai.hroads.webApi.Domains
+namespace senai.hroads.webAPI.Domains
 {
     public partial class Usuario
     {
@@ -12,6 +12,6 @@ namespace senai.hroads.webApi.Domains
         public string Email { get; set; }
         public string Senha { get; set; }
 
-        public virtual TipoUsuario IdTipoUserNavigation { get; set; }
+        public virtual TiposUsuario IdTipoUserNavigation { get; set; }
     }
 }

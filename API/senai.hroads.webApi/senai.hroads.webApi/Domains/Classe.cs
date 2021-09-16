@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace senai.hroads.webApi.Domains
+namespace senai.hroads.webAPI.Domains
 {
     public partial class Classe
     {
         public Classe()
         {
-            ClasseHabilidades = new HashSet<ClasseHabilidade>();
-            Personagems = new HashSet<Personagem>();
+            ClassesHabilidades = new HashSet<ClassesHabilidade>();
+            Personagens = new HashSet<Personagem>();
         }
 
         public int IdClasse { get; set; }
         public string NomeClasse { get; set; }
 
-        public virtual ICollection<ClasseHabilidade> ClasseHabilidades { get; set; }
-        public virtual ICollection<Personagem> Personagems { get; set; }
+        public virtual ICollection<ClassesHabilidade> ClassesHabilidades { get; set; }
+        public virtual ICollection<Personagem> Personagens { get; set; }
     }
 }
