@@ -1,4 +1,5 @@
-﻿using senai.hroads.webAPI.Domains;
+﻿using senai.hroads.webAPI.Contexts;
+using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,51 @@ namespace senai.hroads.webAPI.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
+        HROADSContext ctx = new HROADSContext();
+
         public void Atualizar(int idUsuario, Usuario usuarioAtualizado)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(idUsuario);
+
+            //if (usuarioAtualizado.NomeClasse != null)
+            {
+                //usuarioBuscado.NomeClasse = usuarioAtualizado.NomeClasse;
+            }
+
+            ctx.Usuarios.Update(usuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
         public Usuario BuscarPorId(int idUsuario)
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.FirstOrDefault(u => u.IdUsuario == idUsuario);
         }
 
         public void Cadastrar(Usuario novoUsuario)
         {
-            throw new NotImplementedException();
+            ctx.Usuarios.Add(novoUsuario);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int idUsuario)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(idUsuario);
+
+            ctx.Usuarios.Remove(usuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Usuario> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.OrderBy(u => u.IdUsuario).ToList();
+        }
+
+        public Usuario BuscarPorEmailSenha(string email, string senha)
+        {
+            return ctx.Usuarios.FirstOrDefault(e => e.Email == email && e.Senha == senha);
         }
     }
 }

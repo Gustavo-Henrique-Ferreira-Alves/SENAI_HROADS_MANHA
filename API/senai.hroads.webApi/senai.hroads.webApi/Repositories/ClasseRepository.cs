@@ -28,7 +28,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Classe BuscarPorId(int idClasse)
         {
-            return ctx.Classes.FirstOrDefault(e => e.IdClasse == idClasse);
+            return ctx.Classes.FirstOrDefault(c => c.IdClasse == idClasse);
         }
 
         public void Cadastrar(Classe novaClasse)
@@ -49,7 +49,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public List<Classe> Listar()
         {
-            return ctx.Classes.ToList();
+            return ctx.Classes.OrderBy(c => c.IdClasse).ToList();
         }
     }
 }

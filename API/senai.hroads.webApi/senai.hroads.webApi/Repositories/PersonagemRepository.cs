@@ -1,4 +1,5 @@
-﻿using senai.hroads.webAPI.Domains;
+﻿using senai.hroads.webAPI.Contexts;
+using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,46 @@ namespace senai.hroads.webAPI.Repositories
 {
     public class PersonagemRepository : IPersonagemRepository
     {
+        HROADSContext ctx = new HROADSContext();
+
         public void Atualizar(int idPersonagem, Personagem personagemAtualizado)
         {
-            throw new NotImplementedException();
+            Personagem personagemBuscado = BuscarPorId(idPersonagem);
+
+            //if (personagemAtualizado.NomeClasse != null)
+            {
+                //personagemBuscado.NomeClasse = personagemAtualizado.NomeClasse;
+            }
+
+            ctx.Personagens.Update(personagemBuscado);
+
+            ctx.SaveChanges();
         }
 
         public Personagem BuscarPorId(int idPersonagem)
         {
-            throw new NotImplementedException();
+            return ctx.Personagens.FirstOrDefault(p => p.IdPersonagem == idPersonagem);
         }
 
         public void Cadastrar(Personagem novoPersonagem)
         {
-            throw new NotImplementedException();
+            ctx.Personagens.Add(novoPersonagem);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int idPersonagem)
         {
-            throw new NotImplementedException();
+            Personagem personagemBuscado = BuscarPorId(idPersonagem);
+
+            ctx.Personagens.Remove(personagemBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Personagem> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Personagens.OrderBy(p => p.IdPersonagem).ToList();
         }
     }
 }

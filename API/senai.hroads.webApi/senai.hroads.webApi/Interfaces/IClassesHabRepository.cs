@@ -32,8 +32,8 @@ namespace senai.hroads.webAPI.Interfaces
         /// Atualizar os dados de uma classe de habilidade
         /// </summary>
         /// <param name="idClasseHab">ID da classe de habilidade que será atualizada</param>
-        /// <param name="classeHabAtualizado">Objeto classeHabAtualizado com as novas informações</param>
-        void Atualizar(int idClasseHab, ClassesHabilidade classeHabAtualizado);
+        /// <param name="classeHabAtualizada">Objeto classeHabAtualizada com as novas informações</param>
+        void Atualizar(int idClasseHab, ClassesHabilidade classeHabAtualizada);
 
         /// <summary>
         /// Deletar uma classe de habilidade

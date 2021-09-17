@@ -1,4 +1,5 @@
-﻿using senai.hroads.webAPI.Domains;
+﻿using senai.hroads.webAPI.Contexts;
+using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,46 @@ namespace senai.hroads.webAPI.Repositories
 {
     public class ClassesHabRepository : IClassesHabRepository
     {
-        public void Atualizar(int idClasseHab, ClassesHabilidade classeHabAtualizado)
+        HROADSContext ctx = new HROADSContext();
+
+        public void Atualizar(int idClasseHab, ClassesHabilidade classeHabAtualizada)
         {
-            throw new NotImplementedException();
+            ClassesHabilidade classeHabBuscada = BuscarPorId(idClasseHab);
+
+           // if (classeHabAtualizada.NomeClasse != null)
+            {
+                //classeHabBuscada.NomeClasse = classeHabAtualizada.NomeClasse;
+            }
+
+            ctx.ClassesHabilidades.Update(classeHabBuscada);
+
+            ctx.SaveChanges();
         }
 
         public ClassesHabilidade BuscarPorId(int idClasseHab)
         {
-            throw new NotImplementedException();
+            return ctx.ClassesHabilidades.FirstOrDefault(ch => ch.IdClasseHab == idClasseHab);
         }
 
         public void Cadastrar(ClassesHabilidade novaClasseHab)
         {
-            throw new NotImplementedException();
+            ctx.ClassesHabilidades.Add(novaClasseHab);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int idClasseHab)
         {
-            throw new NotImplementedException();
+            ClassesHabilidade classeHabBuscada = BuscarPorId(idClasseHab);
+
+            ctx.ClassesHabilidades.Remove(classeHabBuscada);
+
+            ctx.SaveChanges();
         }
 
         public List<ClassesHabilidade> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.ClassesHabilidades.OrderBy(ch => ch.IdClasseHab).ToList();
         }
     }
 }

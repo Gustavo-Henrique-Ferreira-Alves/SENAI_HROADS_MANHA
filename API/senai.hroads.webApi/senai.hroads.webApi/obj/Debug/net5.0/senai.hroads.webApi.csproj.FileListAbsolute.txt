@@ -71,3 +71,5 @@ C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.w
 C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\ref\senai.hroads.webAPI.dll
 C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\senai.hroads.webAPI.pdb
 C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\senai.hroads.webAPI.genruntimeconfig.cache
+C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.webAPI\bin\Debug\net5.0\senai.hroads.webAPI.xml
+C:\Users\AMD\Documents\SENAI_HROADS_MANHA\API\senai.hroads.webAPI\senai.hroads.webAPI\obj\Debug\net5.0\senai.hroads.webAPI.xml
