@@ -24,20 +24,17 @@ namespace senai.hroads.webAPI.Controllers
             _tiposHabRepository = new TiposHabRepository();
         }
 
-
         [HttpGet]
         public IActionResult Listar()
         {
             return Ok(_tiposHabRepository.Listar());
         }
 
-
         [HttpGet("{idTipoHab}")]
         public IActionResult BuscarPorId(int idTipoHab)
         {
             return Ok(_tiposHabRepository.BuscarPorId(idTipoHab));
         }
-
 
         [Authorize(Roles = "Administrador")]
         [HttpPost]
@@ -48,7 +45,6 @@ namespace senai.hroads.webAPI.Controllers
             return StatusCode(201);
         }
 
-
         [HttpPut("{idTipoHab}")]
         public IActionResult Atualizar(int idTipoHab, TiposHabilidade tipoHabAtualizado)
         {
@@ -56,7 +52,6 @@ namespace senai.hroads.webAPI.Controllers
 
             return StatusCode(204);
         }
-
 
         [HttpDelete("{idTipoHab}")]
         public IActionResult Deletar(int idTipoHab)

@@ -15,7 +15,7 @@ namespace senai.hroads.webAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class HabilidadesController : ControllerBase
-    {
+    { 
         private IHabilidadeRepository _habilidadeRepository { get; set; }
 
         public HabilidadesController()

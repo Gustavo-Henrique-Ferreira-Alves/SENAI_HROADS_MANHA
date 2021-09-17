@@ -37,6 +37,7 @@ namespace senai.hroads.webAPI.Controllers
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
                     new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUserNavigation.Titulo.ToString()),
+
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-chave-autenticacao"));
