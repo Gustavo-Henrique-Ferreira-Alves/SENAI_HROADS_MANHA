@@ -1,4 +1,5 @@
-﻿using senai.hroads.webAPI.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using senai.hroads.webAPI.Contexts;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
 using System;
@@ -56,7 +57,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Usuario BuscarPorEmailSenha(string email, string senha)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            return ctx.Usuarios.Include(u => u.IdTipoUserNavigation).FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }

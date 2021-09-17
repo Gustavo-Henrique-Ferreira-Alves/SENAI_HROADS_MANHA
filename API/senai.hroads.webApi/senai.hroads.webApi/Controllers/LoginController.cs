@@ -25,7 +25,7 @@ namespace senai.hroads.webAPI.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
-        [HttpPost("Login")]
+        [HttpPost]
         public IActionResult Login(Usuario login)
         {
             Usuario usuarioBuscado = _usuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
@@ -35,8 +35,8 @@ namespace senai.hroads.webAPI.Controllers
                 var minhasClaims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
-                    //new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.idUsuario.ToString()),
-                    new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUser.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
+                    new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUserNavigation.Titulo.ToString()),
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-chave-autenticacao"));

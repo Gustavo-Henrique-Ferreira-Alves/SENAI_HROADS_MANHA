@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
@@ -34,6 +35,7 @@ namespace senai.hroads.webAPI.Controllers
             return Ok(_classeRepository.BuscarPorId(idClasse));
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public IActionResult Cadastrar(Classe novaClasse)
         {
