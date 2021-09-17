@@ -16,9 +16,10 @@ namespace senai.hroads.webAPI.Repositories
         {
             Habilidade habilidadeBuscada = BuscarPorId(idHabilidade);
 
-            //if (habilidadeAtualizada.NomeClasse != null)
+            if (habilidadeAtualizada.NomeHabilidade != null)
             {
-                //habilidadeBuscada.NomeClasse = habilidadeAtualizada.NomeClasse;
+                habilidadeBuscada.NomeHabilidade = habilidadeAtualizada.NomeHabilidade;
+                habilidadeBuscada.IdTipoHab = habilidadeAtualizada.IdTipoHab;
             }
 
             ctx.Habilidades.Update(habilidadeBuscada);

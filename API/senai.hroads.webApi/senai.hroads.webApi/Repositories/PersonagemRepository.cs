@@ -16,9 +16,15 @@ namespace senai.hroads.webAPI.Repositories
         {
             Personagem personagemBuscado = BuscarPorId(idPersonagem);
 
-            //if (personagemAtualizado.NomeClasse != null)
+            if (personagemAtualizado != null)
             {
-                //personagemBuscado.NomeClasse = personagemAtualizado.NomeClasse;
+                personagemBuscado.IdClasse = personagemAtualizado.IdClasse;
+                personagemBuscado.NomePersonagem = personagemAtualizado.NomePersonagem;
+                personagemBuscado.QtndVida = personagemAtualizado.QtndVida;
+                personagemBuscado.QtndMana = personagemAtualizado.QtndMana;
+                personagemBuscado.NomePersonagem = personagemAtualizado.NomePersonagem;
+                personagemBuscado.DataCriacao = personagemAtualizado.DataCriacao;
+                personagemBuscado.DataAtualizacao = personagemAtualizado.DataAtualizacao;
             }
 
             ctx.Personagens.Update(personagemBuscado);

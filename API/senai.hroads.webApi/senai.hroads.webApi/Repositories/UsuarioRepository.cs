@@ -16,9 +16,11 @@ namespace senai.hroads.webAPI.Repositories
         {
             Usuario usuarioBuscado = BuscarPorId(idUsuario);
 
-            //if (usuarioAtualizado.NomeClasse != null)
+            if (usuarioAtualizado != null)
             {
-                //usuarioBuscado.NomeClasse = usuarioAtualizado.NomeClasse;
+                usuarioBuscado.IdTipoUser = usuarioAtualizado.IdTipoUser;
+                usuarioBuscado.Email = usuarioAtualizado.Email;
+                usuarioBuscado.Senha = usuarioAtualizado.Senha;
             }
 
             ctx.Usuarios.Update(usuarioBuscado);
@@ -54,7 +56,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Usuario BuscarPorEmailSenha(string email, string senha)
         {
-            return ctx.Usuarios.FirstOrDefault(e => e.Email == email && e.Senha == senha);
+            return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }
