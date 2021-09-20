@@ -55,7 +55,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public List<Personagem> Listar()
         {
-            return ctx.Personagens.OrderBy(p => p.IdPersonagem).ToList();
+            return ctx.Personagens.OrderBy(c => c.IdClasseNavigation.NomeClasse).ToList();
         }
     }
 }

@@ -51,7 +51,21 @@ namespace senai.hroads.webAPI.Repositories
 
         public List<Habilidade> Listar()
         {
-            return ctx.Habilidades.Include(ch => ch.ClassesHabilidades).OrderBy(h => h.IdHabilidade).ToList();
+            return ctx.Habilidades
+                .Select(h => new Habilidade()
+                {
+                   IdHabilidade = h.IdHabilidade,
+                   IdTipoHab = h.IdTipoHab,
+                   NomeHabilidade = h.NomeHabilidade,
+                   ClassesHabilidades = h.ClassesHabilidades,
+                   
+                   IdTipoHabNavigation = new TiposHabilidade()
+                   {
+                      IdTipoHab = h.IdTipoHabNavigation.IdTipoHab,
+                      NomeTipoHab = h.IdTipoHabNavigation.NomeTipoHab,
+                   }
+                })
+                    .OrderBy(h => h.IdHabilidade).ToList();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Classe BuscarPorId(int idClasse)
         {
-            return ctx.Classes.FirstOrDefault(c => c.IdClasse == idClasse);
+            return ctx.Classes.Include(ch => ch.ClassesHabilidades).Include(p => p.Personagens).FirstOrDefault(c => c.IdClasse == idClasse);
         }
 
         public void Cadastrar(Classe novaClasse)

@@ -29,7 +29,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public TiposUsuario BuscarPorId(int idTipoUser)
         {
-            return ctx.TiposUsuarios.FirstOrDefault(tu => tu.IdTipoUser == idTipoUser);
+            return ctx.TiposUsuarios.Include(u => u.Usuarios).FirstOrDefault(tu => tu.IdTipoUser == idTipoUser);
         }
 
         public void Cadastrar(TiposUsuario novoTipoUser)
