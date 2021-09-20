@@ -1,4 +1,5 @@
-﻿using senai.hroads.webAPI.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using senai.hroads.webAPI.Contexts;
 using senai.hroads.webAPI.Domains;
 using senai.hroads.webAPI.Interfaces;
 using System;
@@ -50,7 +51,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public List<Habilidade> Listar()
         {
-            return ctx.Habilidades.OrderBy(h => h.IdHabilidade).ToList();
+            return ctx.Habilidades.Include(ch => ch.ClassesHabilidades).OrderBy(h => h.IdHabilidade).ToList();
         }
     }
 }

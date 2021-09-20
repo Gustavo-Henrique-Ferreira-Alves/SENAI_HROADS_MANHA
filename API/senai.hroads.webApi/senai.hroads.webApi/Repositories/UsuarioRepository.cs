@@ -57,7 +57,7 @@ namespace senai.hroads.webAPI.Repositories
 
         public Usuario BuscarPorEmailSenha(string email, string senha)
         {
-            return ctx.Usuarios.Include(u => u.IdTipoUserNavigation).FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            return ctx.Usuarios.Include(tu => tu.IdTipoUserNavigation).FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }
